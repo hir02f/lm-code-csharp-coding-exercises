@@ -65,5 +65,18 @@ namespace Exercises.Tests
         {
             Exercise005.IsPangram("the 1 quick brown fox jumps over the 2 lazy dogs").Should().Be(true);
         }
+
+        // My tests
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Exclamationmark()
+        {
+            Exercise005.IsPangram("the_quick_brown_fox_jumps_over_the_lazy_dog!!").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_For_A_Different_Sentence()
+        {
+            Exercise005.IsPangram("Jim quickly realized that the beautiful gowns are expensive.").Should().Be(true);
+        }
     }
 }

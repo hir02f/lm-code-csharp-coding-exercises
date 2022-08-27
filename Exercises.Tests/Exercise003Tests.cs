@@ -14,6 +14,15 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void Given_Vanilla_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            string iceCreamFlavour = "Vanilla";
+            int expectedCode = 2;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
         public void Given_Chocolate_Chip_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
         {
             string iceCreamFlavour = "Mint Chocolate Chip";
@@ -32,10 +41,28 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void Given_Chocolate_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            string iceCreamFlavour = "Chocolate";
+            int expectedCode = 4;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
         public void Given_Raspberry_Ripple_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
         {
             string iceCreamFlavour = "Raspberry Ripple";
             int expectedCode = 1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
+        public void Given_Pistachio_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            string iceCreamFlavour = "Pistachio";
+            int expectedCode = 0;
 
             Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
         }
