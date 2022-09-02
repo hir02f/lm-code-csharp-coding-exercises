@@ -6,13 +6,14 @@ namespace Exercises
         public static DateTime AddGigaSecond(DateTime dateTime)
         {
             // As Ticks is in 100-nanoseconds
-            if ((dateTime.Ticks + 10000000000000000) > DateTime.MaxValue.Ticks)
+            int gigaSecondsInTicks = 10000000000000000;
+            if ((dateTime.Ticks + gigaSecondsInTicks) > DateTime.MaxValue.Ticks)
             {
                 throw new ArgumentException("Answer is bigger than maximum datetime value!");
             }
             else
             {
-                return new DateTime(10000000000000000 + dateTime.Ticks);
+                return new DateTime(gigaSecondsInTicks + dateTime.Ticks);
             }
         }
     }
